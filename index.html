@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog System</title>
+    <style>
+        body {
+            margin: 20px;
+            background-color: green;
+        }
+        h1{
+            text-align: center;
+        }
+        .post {
+            border: 1px solid #000000;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        .post img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Greenest Griddy</h1>
+    <div id="blog-container"></div>
+    <script>
+        console.log("Script is running");
+
+        // Function to render posts
+        function renderPosts(posts) {
+            const blogContainer = document.getElementById('blog-container');
+            if (!blogContainer) {
+                console.error("Blog container not found");
+                return;
+            }
+
+            // Iterate over each post in the JSON object
+            for (const key in posts) {
+                if (posts.hasOwnProperty(key)) {
+                    const post = posts[key];
+
+                    const postElement = document.createElement('div');
+                    postElement.className = 'post';
+                    const postTitle = document.createElement('h2');
+                    postTitle.textContent = post.name;
+                    const postDate = document.createElement('p');
+                    postDate.textContent = post.time
+                    const postContent = document.createElement('p');
+                    postContent.innerHTML = post.contents;
+
+                    postElement.appendChild(postTitle);
+                    postElement.appendChild(postDate);
+                    // Check if the image exists before adding it
+                    if (post.image) {
+                        const postImage = document.createElement('img');
+                        postImage.src = post.image;
+                        postImage.alt = post.name;
+                        postElement.appendChild(postImage);
+                    }
+
+                    postElement.appendChild(postContent);
+                    blogContainer.appendChild(postElement);
+                }
+            }
+        }
+
+        // Fetch posts from posts.json
+        function fetchPosts() {
+            fetch('posts.json')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    renderPosts(data);
+                })
+                .catch(error => console.error('Error fetching posts:', error));
+        }
+
+        // Fetch and render the posts on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchPosts();
+        });
+    </script>
+    <a href="thegreenestgriddy@gmail.com">thegreenestgriddy@gmail.com</a>
+</body>
+</html>
