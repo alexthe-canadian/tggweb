@@ -5,33 +5,39 @@
         "contents": "This is the official TGG website hosted on vercel!. <br> The source code for this website is avaliable on github at The source code for this website is avaliable on github at github.com/alexthe-canadian/tggweb",
         "time": "The 2nd of August 2024"
     },
-    "post2": {
+    "post2":{
         "id":"2",
+        "name": "Welcome to the new website",
+        "contents": "This is the new TGG website i made. Yes i made it in a day. Its slightly better",
+        "time": "The 23rd of September 2024"
+    }
+    "post3": {
+        "id":"3",
         "name": "Redoing the website",
         "contents": "I will start redoing parts of the website to give it a slightly more modern style and generally cleaning up this mess.",
         "time": "The 23rd of September 2024"
     },
-    "post3": {
-        "id": "3",
+    "post4": {
+        "id": "4",
         "name": "YT SHORTS!!!",
         "contents": "I have started making youtube shorts because I like views",
         "time": "The 17th of September 2024" 
     },
-    "post4": {
-        "id": "4",
+    "post5": {
+        "id": "5",
         "name": "STREAM TODDAY!!!!!",
         "contents": "we'll go live eventually www.youtube.com/@TheGreenestGriddy",
         "time": "The 18th of January 2024"
     },
-    "post5": {
-        "id": "5",
+    "post6": {
+        "id": "6",
         "name": "SCARY AMONGUS!!!!",
         "contents": "We found this scary amongus today",
         "image": "cdn/20240118_104714.jpg",
         "time": "The 17th of January 2024"
     },
-    "post6": {
-        "id": "6",
+    "post7": {
+        "id": "7",
         "name": "The first blog post",
         "contents": "this is the best website on the internet (real)",
         "time": "The 17th of January 2024"
