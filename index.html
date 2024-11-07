@@ -30,15 +30,16 @@
 </head>
 <body>
     <h1>The Greenest Griddy</h1>
+    <p id="err"></p>
     <div id="blog-container"></div>
     <script>
-        console.log("Script is running");
-
         // Function to render posts
         function renderPosts(posts) {
             const blogContainer = document.getElementById('blog-container');
+            const err = document.getElementById('err')
             if (!blogContainer) {
                 console.error("Blog container not found");
+                err.textContent = 'Blog container not found. Please contact me.'
                 return;
             }
 
@@ -80,7 +81,7 @@
                     console.log(data);
                     renderPosts(data);
                 })
-                .catch(error => console.error('Error fetching posts:', error));
+                .catch(error => console.error('Error fetching posts:', error) err.textContent = `Error fetching posts: ${error}`);
         }
 
         // Fetch and render the posts on page load
