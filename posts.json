@@ -1,10 +1,16 @@
 {
-    "post6": {
+    "postpin": {
         "id":"6",
         "name":"Welcome to the website",
         "contents": "This is the official TGG website hosted on vercel!. <br> The source code for this website is avaliable on github at The source code for this website is avaliable on github at github.com/alexthe-canadian/tggweb",
         "time": "The 2nd of August 2024"
     },
+    "post7": {
+        "id":"7"
+        "name":"Recent bug fixes"
+        "contents":"I changed how posts are done so i dont have to change all the ids when i add a new one. <br> I have also fixed the email redirection bug (i forgot the mailto in front of the url)"
+        "time": "The 7th of November 2024"
+    }
     "post5": {
         "id":"5",
         "name": "Welcome to the new website",
